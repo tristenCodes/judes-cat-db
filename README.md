@@ -25,20 +25,17 @@ npm install npm@latest -g
 
 A step by step series of examples that tell you how to get a development environment running:
 
-1.Clone the repo
-
+1. Clone the repo
 ```bash
 git clone https://github.com/yourusername/cat-collection-website.git
 ```
 
 2. Install NPM packages
-
 ```bash
 npm install
 ```
 
 3. Start the development server
-
 ```bash
 npm start
 ```
