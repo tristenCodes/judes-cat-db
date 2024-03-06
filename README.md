@@ -1,6 +1,6 @@
-# Cat Collection Website
+# Jude's Cat Collection
 
-Welcome to the Cat Collection website repository! This website is designed to showcase an extensive collection of unique and charming cats. Each cat has its own profile, detailing its characteristics, history, and images.
+Welcome to Jude's Cat Collection website repository! This website is designed to showcase an extensive collection of unique and charming cats. Each cat has its own profile, detailing its characteristics, history, and images.
 
 ## Features
 
@@ -25,20 +25,17 @@ npm install npm@latest -g
 
 A step by step series of examples that tell you how to get a development environment running:
 
-1.Clone the repo
-
+1. Clone the repo
 ```bash
-git clone https://github.com/yourusername/cat-collection-website.git
+git clone https://github.com/tristen-haynes_fbitn/judes-cat-db.git
 ```
 
 2. Install NPM packages
-
 ```bash
 npm install
 ```
 
 3. Start the development server
-
 ```bash
 npm start
 ```
