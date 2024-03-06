@@ -1,6 +1,6 @@
-# Cat Collection Website
+# Jude's Cat Collection
 
-Welcome to the Cat Collection website repository! This website is designed to showcase an extensive collection of unique and charming cats. Each cat has its own profile, detailing its characteristics, history, and images.
+Welcome to Jude's Cat Collection website repository! This website is designed to showcase an extensive collection of unique and charming cats. Each cat has its own profile, detailing its characteristics, history, and images.
 
 ## Features
 
