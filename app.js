@@ -20,8 +20,6 @@ async function main() {
   await mongoose.connect(process.env.MONGOCONNECTIONSTRING);
 }
 
-// console.log(process.env.MONGOCONNECTIONSTRING);
-
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");

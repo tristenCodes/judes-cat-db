@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cat List</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Cat List</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Alternative Names</th>
+        <th>Categories</th>
+        <th>Colors</th>
+        <th>Quantity</th>
+        <th>Size</th>
+      </tr>
+      <% cats.forEach(function(cat) { %>
+        <% const catURL = "/cats/cat/" + cat._id %>
+      <tr>
+        <td>
+          <a href=<%= catURL %>> <%= cat.name %> </a>
+        </td>
+        <td><%= cat.alternativeNames %></td>
+        <td><%= cat.categories %></td>
+        <td><%= cat.colors %></td>
+        <td><%= cat.quantity %></td>
+        <td><%= cat.size %></td>
+      </tr>
+      <% }); %>
+    </table>
+  </body>
+</html>

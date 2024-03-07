@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= cat.name %></title>
+  </head>
+  <body>
+    <h1><%= cat.name %></h1>
+    <% if (cat.image_path) { %>
+    <img src="<%= cat.image_path %>" alt="<%= cat.description %>" />
+    <% } %> <% if (cat.alternative_names.length >= 1 && cat.alternative_names[0]
+    !== ""){ %>
+    <span>Alternative Names: <%= cat.alternative_names %></span>
+    <% } %>
+    <div>
+      <% if (cat.description){ %>
+      <h2>Description</h2>
+      <p><%= cat.description %></p>
+      <% } %>
+      <h3>Kitty Information</h3>
+      <ul>
+        <% if (cat.categories.length >= 1){ %>
+        <li>Categories: <%= cat.categories %></li>
+        <% } %> <% if (cat.colors.length >= 1){ %>
+        <li>Colors: <%= cat.colors %></li>
+        <% } %> <% if (cat.quantity >= 1){ %>
+        <li>Quantity: <%= cat.quantity %></li>
+        <% } %> <% if (cat.size){ %>
+        <li>Size: <%= cat.size %></li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>

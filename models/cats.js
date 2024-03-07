@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const catSchema = new mongoose.Schema({
+const catSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -34,10 +35,9 @@ const catSchema = new mongoose.Schema({
   },
   image_path: {
     type: String,
+    required: true,
   },
-  required: true,
 });
 
 const Cat = mongoose.model("Cat", catSchema);
-
-modules.export = Cat;
+module.exports = Cat;
