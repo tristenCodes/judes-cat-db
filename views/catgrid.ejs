@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cat List</title>
+    <link rel="stylesheet" href="/stylesheets/grid-box.css" />
+  </head>
+
+  <body>
+    <%- include('partials/header.ejs') %>
+    <div class="cat-box-grid">
+      <% cats.forEach(function(cat) { %> <% const catURL = "/cats/id/" + cat._id
+      %> <%- include('./partials/gridBox.ejs', {cat, catURL}) %> <% }); %>
+    </div>
+  </body>
+</html>

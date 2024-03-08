@@ -5,12 +5,14 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const dotenv = require("dotenv");
+const _ = require('lodash');
 dotenv.config()
 
 const indexRouter = require("./routes/index");
 const catsRouter = require("./routes/cats");
 
 const app = express();
+app.locals.lodash = _;
 
 main()
   .then(() => console.log("successfully connected to mongoDB database"))

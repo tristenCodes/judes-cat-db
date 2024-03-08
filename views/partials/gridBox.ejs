@@ -1,0 +1,10 @@
+<a href="<%= catURL %>">
+  <div class="cat-info-box">
+    <% if (cat.image_path) { %>
+    <img src="<%= cat.image_path %>" alt="" />
+    <% } else { %>
+    <img src="/images/placeholder.jpg" alt="" />
+    <% } %>
+    <span><%= cat.name %></span>
+  </div>
+</a>

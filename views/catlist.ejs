@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Cat List</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
-    <h1>Cat List</h1>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Alternative Names</th>
-        <th>Categories</th>
-        <th>Colors</th>
-        <th>Quantity</th>
-        <th>Size</th>
-      </tr>
-      <% cats.forEach(function(cat) { %>
-        <% const catURL = "/cats/cat/" + cat._id %>
-      <tr>
-        <td>
-          <a href=<%= catURL %>> <%= cat.name %> </a>
+
+<head>
+  <title>Cat List</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+  <%- include('partials/header.ejs') %>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Alternative Names</th>
+      <th>Categories</th>
+      <th>Colors</th>
+      <th>Quantity</th>
+      <th>Size</th>
+    </tr>
+    <% cats.forEach(function(cat) { %>
+    <% const catURL = "/cats/id/" + cat._id %>
+    <tr>
+      <td>
+        <a href=<%= catURL %>> <%= cat.name %> </a>
+      </td>
+      <td>
+        <%= cat.alternative_names && cat.alternative_names.map(name => lodash.capitalize(name)).join(', ') %>
         </td>
-        <td><%= cat.alternativeNames %></td>
-        <td><%= cat.categories %></td>
-        <td><%= cat.colors %></td>
-        <td><%= cat.quantity %></td>
-        <td><%= cat.size %></td>
-      </tr>
-      <% }); %>
-    </table>
-  </body>
+      <td>
+        <% if(cat.categories && cat.categories.length > 0) { %>
+        <% cat.categories.forEach(function(category, index) { %>
+        <%= lodash.capitalize(category.name) %><%= index < cat.categories.length - 1 ? ', ' : '' %>
+        <% }); %>
+        <% } else { %>
+        None
+        <% } %>
+      </td>
+      <td>
+          <%= cat.colors && cat.colors.map(color => lodash.capitalize(color)).join(', ') %>
+      </td>
+      </td>
+      <td><%= cat.quantity %></td>
+      <td><%= lodash.capitalize(cat.size) %></td>
+    </tr>
+    <% }); %>
+  </table>
+</body>
+
 </html>
