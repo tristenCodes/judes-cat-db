@@ -19,6 +19,9 @@
     !== ""){ %>
   <span>Alternative Names: <%= cat.alternative_names %></span>
   <% } %>
+  <% if (cat.categories?.length >= 1){ %>
+  <p>Categories: <%= cat.categories?.map(category => category.name).join(', ') %></p>
+  <% } %>
   <div>
     <% if (cat.description){ %>
     <h2>Description</h2>
@@ -26,9 +29,7 @@
     <% } %>
     <h3>Kitty Information</h3>
     <ul>
-      <% if (cat.categories?.length >= 1){ %>
-      <li>Categories: <%= cat.categories.name %></li>
-      <% } %> <% if (cat.colors.length >= 1){ %>
+      <% if (cat.colors.length >= 1){ %>
       <li>Colors: <%= cat.colors %></li>
       <% } %> <% if (cat.quantity >= 1){ %>
       <li>Quantity: <%= cat.quantity %></li>
