@@ -14,6 +14,9 @@ const catsRouter = require("./routes/cats");
 const app = express();
 app.locals.lodash = _;
 
+// test commit
+// test commit 2
+
 main()
   .then(() => console.log("successfully connected to mongoDB database"))
   .catch((err) => console.log(err));
